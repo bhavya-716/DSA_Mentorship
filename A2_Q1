@@ -2,14 +2,14 @@
 
 int main() {
     int n;
-    std::cout << "Enter a number: ";
-    std::cin >> n;
+    cout << "Enter a number: ";
+    cin >> n;
 
     for (int i = 1; i <= n; ++i) {
         for (int j = 0; j < i; ++j) {
-            std::cout << "*\t";
+            cout << "*\t";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     return 0;
