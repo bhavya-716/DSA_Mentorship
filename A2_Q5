@@ -19,6 +19,21 @@ int main() {
 
         std::cout << std::endl;
     }
+    for (int m = n-2; m>=1; m-=2){
+        for (int x = (n - m) / 2; x >= 0; --x) {
+            std::cout << "\t";
+        }
 
+        for (int y = 0; y < m; ++y) {
+            std::cout << "*\t";
+        }
+
+        for (int z = (n - m) / 2; z>= 0; --z) {
+            std::cout << "\t";
+        }
+
+        std::cout << std::endl;
+    }
+    
     return 0;
 }
