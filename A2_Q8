@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main()
+{
+    int n;
+    std::cin >> n;
+    
+    for (int i =1; i<=n ; ++i)
+    {
+        for (int j = n-i; j>=0 ; --j)
+        {
+            std::cout << '\t';
+        }
+        std::cout << "*";
+        for (int k = 0; k<n; ++k )
+        {
+            std::cout << '\t';
+        }
+    std::cout << std::endl;
+    }
+    return 0;
+}
