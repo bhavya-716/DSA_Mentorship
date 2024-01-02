@@ -1,1 +1,38 @@
+#include <iostream>
 
+int main ()
+{
+    int n;
+    std::cin >> n;
+    
+    //upper triangle
+    for (int i = 1; i<=(n+1)/2 ; ++i)
+    {
+        //leading tabs
+        for (int j = 0; j<i; ++j)
+        {
+            std::cout << "\t";
+        }
+        //star pattern
+        std::cout << "*";
+        //middlle tabs
+        for (int k = (n-i-1); k>0; --k)
+        {
+            std::cout << "\t";
+        }
+        for (int k = (n-i-1); k>0; --k)
+        {
+            std::cout << "\t";
+        }
+        //star pattern
+        std::cout << "*";
+        //trailing tabs
+        for (int l = 0; l<i; ++l)
+        {
+            std::cout << "\t";
+        }
+    std::cout << std::endl;  
+    }
+    
+   return 0; 
+}
