@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int findMissingNumber(int inputArray[], int size) {
+    int currentIndex = 0;
+    
+    while (currentIndex <= size) {
+        for (int innerIndex = 0; innerIndex < size; innerIndex++) {
+            if (inputArray[innerIndex] == currentIndex)
+                break;
+            else if (innerIndex == size - 1) {
+                return currentIndex;
+            }
+        }
+        currentIndex++;
+    }
+    return 0;
+}
+
+int main() {
+    int arraySize;
+    cin >> arraySize;
+
+    int inputArray[arraySize];
+    for (int i = 0; i < arraySize; i++) {
+        cin >> inputArray[i];
+    }
+
+    int missingElement = findMissingNumber(inputArray, arraySize);
+    cout << missingElement;
+
+    return 0;
+}
