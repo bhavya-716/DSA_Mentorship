@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+bool isPeakValid(int array[], int size) {
+    int count = 0;
+    for (int i = 0; i < size; i++) {
+        if (array[i] > array[(i + 1) % size]) {
+            count++;
+        }
+    }
+    return (count <= 1);
+}
+
+int main() {
+    int size;
+    cin >> size;
+    int elements[size];
+    for (int i = 0; i < size; i++) {
+        cin >> elements[i];
+    }
+    int result = isPeakValid(elements, size);
+    if (result == 0) {
+        cout << "false";
+    } else {
+        cout << "true";
+    }
+    return 0;
+}
