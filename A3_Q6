@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int searchElement(int size, int target, int elements[]) {
+    for (int i = 0; i < size; i++) {
+        if (elements[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int size, target;
+    cin >> size;
+    
+    int elements[size];
+    for (int i = 0; i < size; i++) {
+        cin >> elements[i];
+    }
+    
+    cin >> target;
+    
+    int result = searchElement(size, target, elements);
+    cout << result;
+    
+    return 0;
+}
