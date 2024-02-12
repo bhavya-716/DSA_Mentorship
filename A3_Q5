@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+void shiftNonZeroElements(int array[], int size) 
+{
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = i; j < size; j++)
+        {
+            if(array[j] != 0)
+            {
+                array[i] = array[j];
+                if(i != j)
+                {
+                    array[j] = 0;
+                }
+                break;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int size;
+    cin >> size;
+
+    int inputArray[size];
+    for(int i = 0; i < size; i++)
+    {
+        cin >> inputArray[i];
+    }
+
+    shiftNonZeroElements(inputArray, size);
+
+    for(int i = 0; i < size; i++)
+    {
+        cout << inputArray[i] << " ";
+    }
+
+    return 0;
+}
